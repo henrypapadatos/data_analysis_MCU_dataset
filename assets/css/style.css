@@ -14,12 +14,12 @@ body {
 }
 
 a {
-  color: #2377c6;
+  color: #2377c6; /*was #2377c6*/
   text-decoration: none;
 }
 
 a:hover {
-  color: #256097;
+  color: #256097; /*was #256097*/
   text-decoration: none;
 }
 
@@ -42,7 +42,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #0563bb;
+  background: #1B7F7A; /*was #0563bb*/
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -220,8 +220,8 @@ h6 {
 .nav-menu .active,
 .nav-menu .active:focus,
 .nav-menu li:hover>a {
-  color: #fff;
-  background: #7F00FF;
+  color: #fff;         /*Left icon color when hovering*/
+  background: #1B7F7A; /*Left icon color backround when hovering*/
 }
 
 .nav-menu a:hover span,
@@ -284,7 +284,7 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/2001_space.png") top right no-repeat;
+  background: url("../img/12_angry_men.jpg") top right no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -310,18 +310,18 @@ h6 {
   font-size: 64px;
   font-weight: 700;
   line-height: 56px;
-  color: #45505b;
+  color: #45505b; /*was #45505b*/
 }
 
 #hero p {
-  color: #45505b;
+  color: #45505b; 
   margin: 15px 0 0 0;
   font-size: 26px;
   font-family: "Poppins", sans-serif;
 }
 
 #hero p span {
-  color: #0563bb;
+  color: #1B7F7A; /* was #0563bb*/
   letter-spacing: 1px;
 }
 
