@@ -368,7 +368,7 @@ section {
 }
 
 .section-title {
-  text-align: center;
+  text-align: center; /* was center*/
   padding-bottom: 30px;
 }
 
@@ -378,7 +378,7 @@ section {
   text-transform: uppercase;
   margin-bottom: 20px;
   padding-bottom: 20px;
-  position: relative;
+  position: relative; /*was relative */
   color: #45505b;
 }
 
@@ -399,13 +399,16 @@ section {
   display: block;
   width: 40px;
   height: 3px;
-  background: #0563bb;
+  background: #1B7F7A; /*was #0563bb*/
   bottom: 0;
   left: calc(50% - 20px);
 }
 
 .section-title p {
   margin-bottom: 0;
+  margin-left: 120px;
+  margin-right: 120px;
+  text-align: justify; /* Lign was added to put to left*/
 }
 
 /*--------------------------------------------------------------
@@ -581,6 +584,42 @@ section {
   background: #fff;
   border: 2px solid #0563bb;
 }
+
+/*--------------------------------------------------------------
+# Gender
+--------------------------------------------------------------*/
+.gender .content h3 {
+  font-weight: 700;
+  font-size: 26px;
+  color: #728394;
+}
+
+.gender .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.gender .content ul li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.gender .content ul strong {
+  margin-right: 10px;
+}
+
+.gender .content ul i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: #0563bb;
+  line-height: 0;
+}
+
+.gender .content p:last-child {
+  margin-bottom: 0;
+}
+
 
 /*--------------------------------------------------------------
 # Portfolio
@@ -1168,6 +1207,42 @@ section {
   }
 }
 
+
+/*--------------------------------------------------------------
+# Conclusion
+--------------------------------------------------------------*/
+.conclusion .content h3 {
+  font-weight: 700;
+  font-size: 26px;
+  color: #728394;
+}
+
+.conclusion .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.conclusion .content ul li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.conclusion .content ul strong {
+  margin-right: 10px;
+}
+
+.conclusion .content ul i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: #0563bb;
+  line-height: 0;
+}
+
+.conclusion .content p:last-child {
+  margin-bottom: 0;
+}
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -1175,7 +1250,7 @@ section {
   background: #f7f8f9;
   color: #45505b;
   font-size: 14px;
-  text-align: center;
+  text-align: left; /*was center*/
   padding: 30px 0;
 }
 
@@ -1190,7 +1265,7 @@ section {
 
 #footer p {
   font-size: 15;
-  font-style: italic;
+  font-style: normal; /*was italic*/
   padding: 0;
   margin: 0 0 40px 0;
 }
