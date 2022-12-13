@@ -46,11 +46,12 @@
     <nav id="navbar" class="navbar nav-menu">
       <ul>
         <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-        <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Problematic</span></a></li>
+        <li><a href="#problematic" class="nav-link scrollto"><i class="bx bx-question-mark"></i> <span>Problematic</span></a></li>
+        <li><a href="#data" class="nav-link scrollto"><i class="bx bx-data"></i> <span>Our data</span></a></li>
         <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
         <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
         <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
-        <li><a href="#gender" class="nav-link scrollto"><i class="bi bi-gender-female"></i> <span>Gender analysis</span></a></li>
+        <li><a href="#gender" class="nav-link scrollto"><i class="bx bx-male-female"></i> <span>Gender analysis</span></a></li>
         <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
         <li><a href="#conclusion" class="nav-link scrollto"><i class="bi bi-ticket-perforated"></i> <span>Conclusion</span></a></li>
       </ul>
@@ -76,9 +77,9 @@
   <main id="main">
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <section id="problematic" class="maintheme">
       <div class="container" data-aos="fade-up">
-
+        <p><br></p> <!-- insert line break-->
         <div class="section-title">
           <h2>Why this matters</h2>
           <p>A survey conducted on two thousand British adults showed that people watch TV for 
@@ -95,6 +96,7 @@
             by analyzing the critics review and box office revenue of movies.</p>
         </div>
 
+        <!--
         <div class="row">
           <div class="col-lg-4">
             <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
@@ -128,10 +130,70 @@
               Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
             </p>
           </div>
-        </div>
+        </div> -->
 
       </div>
     </section><!-- End About Section -->
+
+
+
+    <!-- ======= Data Section ======= -->
+    <section id="data" class="maintheme">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Our data</h2>
+          <p>To conduct our analysis we use the <a href="https://www.cs.cmu.edu/~ark/personas/">CMU Movie Summary Corpus</a>
+            dataset. It is separated in three main categories: </p>
+          <dl>
+            <dt>Movies metadata</dt>
+            <dd>General infos for more than 80'000 movies, like the runtime, country of origin or genres.</dd>
+            <dt>Characters metadata</dt>
+            <dd>Different atributes for more than 450'000 characters, like the movie they appear in, 
+              the actor portraying them and for said actor info like its height, gender or age at movie's release. </dd>
+            <dt>Plot summaries</dt>
+            <dd>Synopsis extracted from Wikipedia for more than 40'000 movies.</dd>
+          </dl>
+          <p>The metric we are interested in for a specific movie is its commercial success and critical one. To quantify the first one
+            we use the box office revenues. However our dataset doesn't provide any info about the films' critical reception.<br>
+            To obtain this metric we extracted the <a href="https://www.rottentomatoes.com/">Rotten Tomatoes</a>  score from the movies' wikidata pages.
+            Rotten Tomatoes is an American website that aggregates reviews from professional critics. 
+            If a review is generally positive, it is simplified to a “fresh” rating. <br>
+            On the other hand, 
+            if it is considered negative, it is categorized as “rotten”. The Tomatometer score is then the percentage of “fresh” 
+            reviews given to a movie. We also queried the number of reviews that were used for said Tomatometer score. </p>
+
+          <div class="col-">
+            <img src="assets/img/RottenTomatoes.jpg" class="img-fluid" alt="" width="100">
+          </div>
+          
+            <!--METHOD TO INTEGRATE PLOTLY PLOT FROM HTML-->
+          <p> <br>This is just to show that we can plot plotly hmtl file in website </p>
+
+          <div class="col-">  
+            <iframe id="serviceFrameSend" scrolling="no" style="border:none;" seamless="seamless" src="assets/plots/testplotly.html" height="525" width="800"></iframe>
+          </div>
+          
+
+        </div>
+      </div>
+    </section><!-- End Conclusion Section -->
+
+    
+
+    <!-- ======= Conclusion Section ======= -->
+    <section id="in_depth_analysis" class="maintheme">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>In depth analysis</h2>
+          <p>We first wann see how..<br>
+            To do this...</p>
+        </div>
+      </div>
+    </section><!-- End Conclusion Section -->
+
+
 
     <!-- ======= Facts Section ======= -->
     <section id="facts" class="facts">
@@ -723,7 +785,7 @@
 
 
     <!-- ======= Conclusion Section ======= -->
-    <section id="conclusion" class="conclusion">
+    <section id="conclusion" class="maintheme">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -750,8 +812,8 @@
       <div class="col-lg-6 pt-4 pt-lg-0 content">
         <h3>Representation in film, a data story</h3>
         <p>
-          Built as part of the Applied Data Analysis course at EPFL in Lausanne. Baptiste Savioz, Henry Papadatos
-          Malek Elmekki and Nicolas Münger.
+          Built as part of the Applied Data Analysis course at EPFL in Lausanne. </br>
+          Team members: Baptiste Savioz, Henry Papadatos, Malek Elmekki and Nicolas Münger.
         </p>
         <div class="credits">
           <!-- All the links in the footer should remain intact. -->

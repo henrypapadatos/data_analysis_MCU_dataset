@@ -14,7 +14,7 @@ body {
 }
 
 a {
-  color: #2377c6; /*was #2377c6*/
+  color: #1B7F7A; /*was #2377c6*/
   text-decoration: none;
 }
 
@@ -363,7 +363,7 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 20px 0; /*change this to have less or more padding between section*/
   overflow: hidden;
 }
 
@@ -411,38 +411,73 @@ section {
   text-align: justify; /* Lign was added to put to left*/
 }
 
+/*added some list style change here for padding or else!!*/
+.section-title ul {
+  position: relative;
+  margin-left: 140px;
+  text-align: left;
+  margin-top: 3px;
+  margin-bottom: -2px;
+}
+
+.section-title ul li {
+  padding-bottom: 5px;
+}
+
+.section-title dl {
+  position: relative;
+  margin-left: 140px;
+  text-align: left;
+  margin-top: 3px;
+  margin-bottom: -2px;
+}
+
+.section-title dl dt {
+  /*font-weight: normal;    uncoment to 'unbold'*/ 
+  padding-bottom: 0px;
+}
+
+.section-title dl dd {
+  padding-bottom: 0px;
+  margin-right: 120px;
+  text-align: justify; /* Lign was added to put to left*/
+}
+
+
+
 /*--------------------------------------------------------------
-# About
+# Maintheme
 --------------------------------------------------------------*/
-.about .content h3 {
+.maintheme .content h3 {
   font-weight: 700;
   font-size: 26px;
   color: #728394;
 }
 
-.about .content ul {
+.maintheme .content ul {
   list-style: none;
   padding: 0;
 }
 
-.about .content ul li {
+.maintheme .content ul li {
+  margin-top: 20px;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
 }
 
-.about .content ul strong {
+.maintheme .content ul strong {
   margin-right: 10px;
 }
 
-.about .content ul i {
+.maintheme .content ul i {
   font-size: 16px;
   margin-right: 5px;
   color: #0563bb;
   line-height: 0;
 }
 
-.about .content p:last-child {
+.maintheme .content p:last-child {
   margin-bottom: 0;
 }
 
