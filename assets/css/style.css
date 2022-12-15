@@ -19,7 +19,7 @@ a {
 }
 
 a:hover {
-  color: #256097; /*was #256097*/
+  color: #1B7F7A; /*was #256097*/
   text-decoration: none;
 }
 
@@ -56,7 +56,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #0678e3;
+  background: #1B7F7A;
   color: #fff;
 }
 
@@ -84,7 +84,7 @@ h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #0563bb;
+  border: 6px solid #1B7F7A;
   border-top-color: #fff;
   border-bottom-color: #fff;
   border-radius: 50%;
@@ -297,7 +297,7 @@ h6 {
 
 #hero:before {
   content: "";
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.6); /* change here for transparency values*/
   position: absolute;
   bottom: 0;
   top: 0;
@@ -375,7 +375,7 @@ section {
 .section-title h2 {
   font-size: 32px;
   font-weight: bold;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative; /*was relative */
@@ -441,6 +441,50 @@ section {
   padding-bottom: 0px;
   margin-right: 120px;
   text-align: justify; /* Lign was added to put to left*/
+}
+
+.section-title figcaption {
+  font-size: 12px;
+}
+
+.section-title .count-box {
+  padding: 30px 30px 25px 30px;
+  margin-top: 30px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  background: #fff;
+}
+
+.section-title .count-box i {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  background: #1B7F7A;
+  color: #fff;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+}
+
+.section-title .count-box span {
+  font-size: 36px;
+  display: block;
+  font-weight: 600;
+  color: #011426;
+}
+
+.section-title .count-box p {
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  text-align: center; /* Lign was added to put to left*/
 }
 
 
@@ -883,7 +927,7 @@ section {
 --------------------------------------------------------------*/
 .services .icon-box {
   text-align: center;
-  padding: 70px 20px 80px 20px;
+  padding: 20px 5px 20px 5px;
   transition: all ease-in-out 0.3s;
   background: #fff;
   box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.05);
@@ -1296,6 +1340,7 @@ section {
   font-family: "Poppins", sans-serif;
   padding: 0;
   margin: 0 0 15px 0;
+
 }
 
 #footer p {
