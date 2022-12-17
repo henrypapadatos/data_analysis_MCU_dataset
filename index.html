@@ -45,13 +45,14 @@
 
     <nav id="navbar" class="navbar nav-menu">
       <ul>
-        <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+        <!-- <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li> -->
         <li><a href="#problematic" class="nav-link scrollto"><i class="bx bx-question-mark"></i> <span>Problematic</span></a></li>
         <li><a href="#data" class="nav-link scrollto"><i class="bx bx-data"></i> <span>Our data</span></a></li>
+        <li><a href="#metric" class="nav-link scrollto"><i class='bx bx-edit'></i> <span>Metrics</span></a></li>
         <li><a href="#temporal" class="nav-link scrollto"><i class='bx bx-calendar'></i> <span>Temporal analysis</span></a></li>
         <li><a href="#in_depth" class="nav-link scrollto"><i class='bx bx-bar-chart'></i> <span>In depth analysis</span></a></li>
         <li><a href="#success" class="nav-link scrollto"><i class='bx bx-dollar'></i> <span>Critical/Commercial success</span></a></li>
-        <li><a href="#gender" class="nav-link scrollto"><i class="bx bx-male-female"></i> <span>Gender analysis</span></a></li>
+        <li><a href="#observational" class="nav-link scrollto"><i class='bx bx-search'></i> <span>Critical/Commercial success</span></a></li>
         <li><a href="#conclusion" class="nav-link scrollto"><i class="bi bi-ticket-perforated"></i> <span>Conclusion</span></a></li>
       </ul>
     </nav><!-- .nav-menu -->
@@ -212,17 +213,15 @@
             <!--METHOD TO INTEGRATE PLOTLY PLOT FROM HTML-->
           <p> <br>This is just to show that we can plot plotly hmtl file in website </p>
 
-          <div class="col-">  
+          <!-- <div class="col-">  
             <iframe id="serviceFrameSend" scrolling="no" style="border:none;" seamless="seamless" src="assets/plots/testplotly.html" height="525" width="800"></iframe>
           </div>
 
           <div class="col-">  
             <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~chris/1638.embed" height="525" width="100%"></iframe>
-          </div>
+          </div> -->
 
-          <div class="col-">  
-            <iframe id="serviceFrameSend" scrolling="no" style="border:none;" seamless="seamless" src="assets/plots/dropdown_chart_2.html" height="525" width="800"></iframe>
-          </div>
+          
           
 
         </div>
@@ -248,6 +247,9 @@
             <dd>INSERT INFO</dd>
           </dl>
 
+          <div class="col-">  
+            <iframe id="serviceFrameSend" scrolling="no" style="border:none;" seamless="seamless" src="assets/plots/world_metric.html" height="525" width="800"></iframe>
+          </div>
         </div>
       </div>
     </section><!-- End Metric Section -->
@@ -260,7 +262,38 @@
         <div class="section-title">
           <h2>Temporal analysis</h2>
           <p>Insert all the plots etc.
+
+            <!-- <div style="display: flex; margin: auto; width: 100%; margin-bottom: 2em; margin-top: 2em;"> -->
+            <div style="display: flex; margin-left: 120px; margin-right: 120px; margin-bottom: 2em; margin-top: 2em;">
+              <div style="width: 40%;">
+                <img src="assets/img/2001_space.png" class="img-fluid" alt="">
+              </div>
+              <div style="width: 60%; text-align: justify; margin-left: 2em;">
+                <h3>Put image and text 1</h3>
+                Put image and text example <br>
+                BLablablaldaaaaaaaaaaaaa aaaaaaaaadfas dfasjdfhs aldjfhsadfhasf  hdlasdfhsa kdh jfsadjhfalsdhfadjflsdjfadfa
+              </div>
+            </div>
+
+            <div style="display: flex; margin-left: 120px; margin-right: 120px; margin-bottom: 2em; margin-top: 3em;">
+              
+              <div style="width: 60%; text-align: justify; margin-right: 2em;">
+                <h3>Put image and text 2</h3>
+                Put image and text side by side other example <br>
+                BLablablaldaaaaaaaaaaaaa aaaaaaaaadfasdfasjdfhs aldjfhsadfhasf  hdlasdfhsa kdhjfsadjhfalsdhfadjflsdjfadfa
+              </div>
+              <div style="width: 40%;">
+                <img src="assets/img/dlab.svg" class="img-fluid" alt="">
+              </div>
+            </div>
+
+
           </p>
+
+
+          <div class="col-">  
+            <iframe id="serviceFrameSend" scrolling="no" style="border:none;" seamless="seamless" src="assets/plots/temporal_evolution.html" height="525" width="80%"></iframe>
+          </div>
 
         </div>
       </div>
@@ -276,13 +309,18 @@
           <h2>In depth analysis</h2>
           <p>We first wann see how..<br>
             To do this...</p>
+
+
+          <div class="col-">  
+            <iframe id="serviceFrameSend" scrolling="no" style="border:none;" seamless="seamless" src="assets/plots/dropdown_chart_2.html" height="525" width="80%"></iframe>
+          </div>
         </div>
       </div>
     </section><!-- End In depth analysis Section -->
 
 
 
-    <!-- ======= In depth analysis Section ======= -->
+    <!-- ======= Success Section ======= -->
     <section id="success" class="maintheme">
       <div class="container" data-aos="fade-up">
 
@@ -292,7 +330,28 @@
             To do this...</p>
         </div>
       </div>
-    </section><!-- End In depth analysis Section -->
+    </section><!-- End Success Section -->
+
+
+
+    <!-- ======= Observational Section ======= -->
+    <section id="observational" class="maintheme">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Observational study</h2>
+          <p>We first wann see how..<br>
+            You can hover over the plot to see if you find your favorite movie!</p>
+
+
+            <div class="col-">  
+              <iframe id="serviceFrameSend" scrolling="no" style="border:none;" seamless="seamless" src="assets/plots/observational_Rotten_Score.html" height="525" width="80%"></iframe>
+            </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Obeservational Section -->
 
 
 
