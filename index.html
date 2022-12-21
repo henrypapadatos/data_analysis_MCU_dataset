@@ -369,8 +369,39 @@
         <div class="section-title">
           <h2>Metrics</h2>
           <p>To answer our research questions, we first need to have a way to quantify the 
-            diversity in movies. For this purpose we created two metrics:
+            diversity in movies. For this purpose we created some custom metrics:
           </p>
+
+          <dl>
+            <dt>
+              The actor score
+            </dt>
+            <dd>
+              The first thing we needed to measure ethnic and gender diversity was to be able to quantify the importance
+              of the role played by an actor. Does he play a leading role, or is it only a minor role? To do this, we
+              analysed the summary of the film and awarded points each time a character was mentioned, and proportionally 
+              to the order of appearance.
+
+              <div style="display: flex; margin-left: 20px; margin-right: 20px; margin-bottom: 2em; margin-top: 2em;">
+                <div style="width: 50%; text-align: justify; margin-right: 2em;">
+                  <h3>Original summary</h3>
+                  On his eleventh birthday, Harry Potter discovers that he is no ordinary boy. Hagrid, a beetle-eyed giant,
+                  tells Harry that he is a wizard and has a place at Hogwarts School of Witchcraft and Wizardry, directed by
+                  the mysterious professor Dumbeldore. In his first year of magical education, with his friends Hermione and
+                  Ron, Harry tackles a fully grown mountain troll, learns to play Quidditch, and participates in a thrilling
+                  "live" game of chess.
+                </div>
+                <div style="width: 50%; text-align: justify; margin-right: 2em;">
+                  <h3>Processed summary</h3>
+                  On his eleventh birthday, <b>Harry Potter</b> discovers that <b>Harry Potter</b> is no ordinary boy. <b>Rubeus Hagrid</b>, a beetle-eyed giant,
+                  tells Harry Potter that <b>Harry Potter</b> is a wizard and has a place at Hogwarts School of Witchcraft and Wizardry, directed by
+                  the mysterious professor <b>Albus Dumbeldore</b>. In his first year of magical education, with his friends <b>Hermione Granger</b> and
+                  <b>Ron Weasley</b>, <b>Harry Potter</b> tackles a fully grown mountain troll, learns to play Quidditch, and participates in a thrilling
+                  "live" game of chess.
+                </div>
+              </div>
+            </dd>
+          </dl>
 
           <dl>
             <dt>Gender metric</dt>
