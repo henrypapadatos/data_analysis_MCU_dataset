@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>MyResume Bootstrap Template - Index</title>
+  <title>Datastory</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -363,11 +363,49 @@
           </p>
 
           <dl>
-            <dt>Ethnicity metric</dt>
-            <dd>INSERT INFO</dd>
             <dt>Gender metric</dt>
-            <dd>INSERT INFO</dd>
+            <dd>The first metric represent the gender parity in a movie. The more diverse in gender one movie is, 
+              the highest it's score is gonna get. Three factors play a role for this score:
+              <ul>
+                <li>The proportion of gender represented</li>
+                <li>The relatives importance of those ethnicities </li>
+                <li>Minority visibility in main roles</li>
+              </ul>  
+
+            </dd>
+
+            <dt>Ethnicity metric</dt>
+            <dd>The second metric intends to illustrate the ethnicity diversity of actors playing in a movie. 
+              A score of 0 signifies the lowest ethnicity diversity possible while 1 is the highest one. To compute this value
+            we consider three main factors:  <br>
+            <ul>
+              <li>The number of different ethnicity present in the film</li>
+              <li>The relatives importance of those ethnicities </li>
+              <li>Minority visibility in main roles</li>
+            </ul>  
+            For more details about the exact formulas, please refer to our accompanying Jupyter Notebook. 
+            </dd>  
           </dl>
+
+
+          <table class="styled-table">
+            <thead>
+                <tr>
+                  <th>Movie</th>  
+                  <th>Gender diversity score</th>
+                  <th>Ethnicity diversity score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Love Actually</td>
+                    <td>0.9175</td>
+                    <td>0.2808</td>
+                </tr>
+                <!-- and so on... -->
+            </tbody>
+          </table>
+
 
         
         </div>
@@ -381,7 +419,10 @@
 
         <div class="section-title">
           <h2>Metric distribution by year of release</h2>
-          <p>Insert all the plots etc.
+          <p>We first look at how both scores evolved through the year. For this purpose we computed the average value 
+            for each metric per year. Due to a very low number of data for movie released before 1920, for the rest of this analysis 
+            we only consider films released after that date.
+
 
           </p>
 
@@ -798,7 +839,7 @@
           <img src="assets/img/dlab.svg" class="img-fluid" alt="">
         </div>
         <div class="col-lg-6 pt-4 pt-lg-0 content">
-          <h3>Representation in film, a data story</h3>
+          <h3>Is diversity a recipe for success?</h3>
           <p>
             Built as part of the Applied Data Analysis course at EPFL in Lausanne. </br>
             Team members: Baptiste Savioz, Henry Papadatos, Malek Elmekki and Nicolas Münger.

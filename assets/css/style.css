@@ -414,7 +414,7 @@ section {
 /*added some list style change here for padding or else!!*/
 .section-title ul {
   position: relative;
-  margin-left: 140px;
+  margin-left: 10px;
   text-align: left;
   margin-top: 3px;
   margin-bottom: -2px;
