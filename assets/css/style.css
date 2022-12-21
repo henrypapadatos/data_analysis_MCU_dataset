@@ -434,6 +434,7 @@ section {
 
 .section-title dl dt {
   /*font-weight: normal;    uncoment to 'unbold'*/ 
+  padding-top: 10px;
   padding-bottom: 0px;
 }
 
