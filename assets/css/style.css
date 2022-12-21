@@ -520,6 +520,11 @@ section {
   background-color: #f3f3f3;
 }
 
+.section-title p span {
+  color: #1B7F7A; /* was #0563bb*/
+  letter-spacing: 1px;
+}
+
 
 
 /*--------------------------------------------------------------
