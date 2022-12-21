@@ -502,12 +502,14 @@ section {
 .styled-table thead tr {
   background-color: #1B7F7A;
   color: #ffffff;
-  text-align: left;
+  text-align: center;
 }
 
 .styled-table th,
 .styled-table td {
     padding: 12px 15px;
+    text-align: center;
+    max-width: 800px;
 }
 
 .styled-table tbody tr {
@@ -517,8 +519,6 @@ section {
 .styled-table tbody tr:nth-of-type(even) {
   background-color: #f3f3f3;
 }
-
-
 
 
 
