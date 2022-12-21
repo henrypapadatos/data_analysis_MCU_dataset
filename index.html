@@ -369,22 +369,24 @@
         <div class="section-title">
           <h2>Metrics</h2>
           <p>To answer our research questions, we first need to have a way to quantify the 
-            diversity in movies. For this purpose we created some custom metrics:
+            diversity in movies. For this purpose we created some custom metrics. For more details about the exact formulas, please refer to our accompanying Jupyter Notebook.:
           </p>
 
           <dl>
-            <dt>
+            <dt><h3>
               The actor score
-            </dt>
+            </h3></dt>
+
             <dd>
               The first thing we needed to measure ethnic and gender diversity was to be able to quantify the importance
               of the role played by an actor. Do they play a leading role, or is it only a minor role? To do this, we
               analysed the summary of the film and awarded points each time a character was mentioned, and proportionally 
-              to the order of appearance.
+              to the order of appearance.In addition, we used the XXX tool to analyse the summaries, find the character's
+              co-references and replace them with their names.
 
               <div style="display: flex; margin-left: 20px; margin-right: 20px; margin-bottom: 2em; margin-top: 2em;">
                 <div style="width: 50%; text-align: justify; margin-right: 2em;">
-                  <h3>Original summary</h3>
+                  <h5>Original summary</h5>
                   On his eleventh birthday, Harry Potter discovers that he is no ordinary boy. Hagrid, a beetle-eyed giant,
                   tells Harry that he is a wizard and has a place at Hogwarts School of Witchcraft and Wizardry, directed by
                   the mysterious professor Dumbeldore. In his first year of magical education, with his friends Hermione and
@@ -392,39 +394,93 @@
                   "live" game of chess.
                 </div>
                 <div style="width: 50%; text-align: justify; margin-right: 2em;">
-                  <h3>Processed summary</h3>
-                  On his eleventh birthday, <b>Harry Potter</b> discovers that <b>Harry Potter</b> is no ordinary boy. <b>Rubeus Hagrid</b>, a beetle-eyed giant,
-                  tells Harry Potter that <b>Harry Potter</b> is a wizard and has a place at Hogwarts School of Witchcraft and Wizardry, directed by
-                  the mysterious professor <b>Albus Dumbeldore</b>. In his first year of magical education, with his friends <b>Hermione Granger</b> and
-                  <b>Ron Weasley</b>, <b>Harry Potter</b> tackles a fully grown mountain troll, learns to play Quidditch, and participates in a thrilling
+                  <h5>Processed summary</h5>
+                  On his eleventh birthday, <b>Harry</b> discovers that <b>Harry</b> is no ordinary boy. <b>Hagrid</b>, a beetle-eyed giant,
+                  tells Harry Potter that <b>Harry</b> is a wizard and has a place at Hogwarts School of Witchcraft and Wizardry, directed by
+                  the mysterious professor <b>Dumbeldore</b>. In his first year of magical education, with his friends <b>Hermione</b> and
+                  <b>Ron</b>, <b>Harry</b> tackles a fully grown mountain troll, learns to play Quidditch, and participates in a thrilling
                   "live" game of chess.
                 </div>
               </div>
             </dd>
           </dl>
 
+          <table class="styled-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Harry</th>
+                    <th>Hagrid</th>
+                    <th>Dumbeldore</th>
+                    <th>Ron</th>
+                    <th>Hermione</th>
+                    <th>Rogue</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b> Actor Score</b></td>
+                    <td>29.6%</td>
+                    <td>18.5%</td>
+                    <td>17.0%</td>
+                    <td>13.1%</td>
+                    <td>15.3%</td>
+                    <td>6.5%</td>
+                </tr>
+                <!-- and so on... -->
+            </tbody>
+          </table>
+
+
           <dl>
-            <dt>Gender metric</dt>
-            <dd>The first metric represent the gender parity in a movie. The more diverse in gender one movie is, 
-              the highest it's score is gonna get. Three factors play a role for this score:
+            <dt><h3>Gender metric</h3></dt>
+            <dd>The gender metric represents the parity of gender in a film. The more equitable a film is in its gender
+              representation, the higher its score will be.  Note that we only considered the genders already present in
+              the dataset, i.e. male and female. We used three factors to construct this score :
               <ul>
-                <li>The proportion of gender represented</li>
-                <li>The relatives importance of those ethnicities </li>
-                <li>Minority visibility in main roles</li>
+                <li>The ratio of male/female actors</li>
+                <li>The ratio of the importance of female/male roles</li>
+                <li>The difference in the masculinity/femininity scores of the summaries</li>
               </ul>  
-
             </dd>
+          </dl>
+            <table class="styled-table">
+              <thead>
+                  <tr>
+                      <th>Movie</th>
+                      <th>Actress</th>
+                      <th>Actor</th>
+                      <th>Importance of feminin roles</th>
+                      <th>Importance of masculin roles</th>
+                      <th>Feminity score</th>
+                      <th>Masculinity score</th>
+                      <th>Gender diversity score</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>Love Actually</td>
+                      <td>15</td>
+                      <td>16</td>
+                      <td>47.6%</td>
+                      <td>52.4%</td>
+                      <td>0.00015</td>
+                      <td>0.00289</td>
+                      <td>0.9175</td>
+                  </tr>
+                  <!-- and so on... -->
+              </tbody>
+            </table>
 
-            <dt>Ethnicity metric</dt>
-            <dd>The second metric intends to illustrate the ethnicity diversity of actors playing in a movie. 
-              A score of 0 signifies the lowest ethnicity diversity possible while 1 is the highest one. To compute this value
-            we consider three main factors:  <br>
+          <dl>
+            <dt><h3>Ethnicity metric</h3></dt>
+            <dd>This metric aims to illustrate the ethnic diversity represented in a film. To calculate this value, we take into
+              account three main factors <br>
             <ul>
-              <li>The number of different ethnicity present in the film</li>
-              <li>The relatives importance of those ethnicities </li>
-              <li>Minority visibility in main roles</li>
-            </ul>  
-            For more details about the exact formulas, please refer to our accompanying Jupyter Notebook. 
+              <li>The number of different ethnicities present in the film in ratio to the number of actors</li>
+              <li>The relative importance of these ethnicities in terms of the number of actors (representing a minority is worth more points than representing a majority)</li>
+              <li>The visibility of minorities in leading roles</li>
+            </ul>   
             </dd>  
           </dl>
 
@@ -433,14 +489,16 @@
             <thead>
                 <tr>
                   <th>Movie</th>  
-                  <th>Gender diversity score</th>
+                  <th>number of ethnicity represented</th>
+                  <th>Importance of ethnicity represented</th>
                   <th>Ethnicity diversity score</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>Love Actually</td>
-                    <td>0.9175</td>
+                    <td>40%</td>
+                    <td>33.6%</td>
                     <td>0.2808</td>
                 </tr>
                 <!-- and so on... -->
