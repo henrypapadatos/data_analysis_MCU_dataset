@@ -231,8 +231,12 @@
 
           <dl>
             <dt>Characters metadata</dt>
-            <dd>Different attributes for more than 450'000 characters, like the movie they appear in, 
-              the actor portraying them and, for said actor, info like their height, gender or age at movie's release. </dd>
+            <dd>
+              A table with different attributes about the actors and their film characters. However, the ethnicities given for the
+              actors were sometimes extremely specific and other times far too general. They were not usable for a meaningful 
+              analysis. We therefore grouped them into nine broad geographical categories, and a tenth to take into account
+              unclassifiable minorities
+            </dd>
           </dl>
 
           <table class="styled-table">
@@ -308,7 +312,10 @@
 
           <dl>
             <dt>Plot summaries</dt>
-            <dd>Synopses extracted from Wikipedia for more than 40'000 movies.</dd>
+            <dd>
+              English synopses from Wikipedia. In addition, in order to refine our future analyses, we analysed the lexical
+              field used in the summaries in order to assign a masculinity and femininity score to the summary. For this purpose,
+              we used the <a href="https://libraries.io/pypi/empath">empath</a> python library.</dd>
           </dl>
           
           <table class="styled-table">
@@ -316,6 +323,8 @@
                 <tr>
                   <th>Movie</th>  
                   <th>Summary</th>
+                  <th>Masculinity</th>
+                  <th>Feminity</th>
                 </tr>
             </thead>
             <tbody>
@@ -329,29 +338,12 @@
                       variation of The Troggs' classic hit "Love Is All Around". Although he thinks the record is terrible, Mack promotes
                       the release in the hope it will become the Christmas number one single. The song does go to number one; after
                       briefly celebrating his victory at a party hosted by Sir Elton John, [...]</i></td>
+                    <td>0.00015</td>
+                    <td>0.00289</td>
                 </tr>
                 <!-- and so on... -->
             </tbody>
           </table>
-
-          <p>The metric we are interested in for a specific movie is its commercial success and critical one. To quantify the first one
-            we use the box office revenues. However our dataset doesn't provide any info about the films' critical reception.<br>
-            To obtain this metric we extracted the <a href="https://www.rottentomatoes.com/">Rotten Tomatoes</a>  score from the movies' wikidata pages.
-            Rotten Tomatoes is an American website that aggregates reviews from professional critics. 
-            If a review is generally positive, it is simplified to a “fresh” rating. <br>
-            On the other hand, 
-            if it is considered negative, it is categorized as “rotten”. The Tomatometer score is then the percentage of “fresh” 
-            reviews given to a movie. We also queried the number of reviews that were used for said Tomatometer score. <br> </p>
-          <p>
-            <br><!-- white space-->
-          </p>
-          <div class="col-">
-            <img src="assets/img/Jurassic_park_RT.jpg" class="img-fluid" alt="" width="600">
-            <figcaption>Score for the movie <a href="https://www.rottentomatoes.com/m/jurassic_park">Jurassic Park</a>. <br> We only consider Tomatometer score, i.e. professional reviews.</figcaption>
-          </div>
-          
-            <!--METHOD TO INTEGRATE PLOTLY PLOT FROM HTML-->
-          <p> <br>This is just to show that we can plot plotly hmtl file in website </p>
 
           <!-- <div class="col-">  
             <iframe id="serviceFrameSend" scrolling="no" style="border:none;" seamless="seamless" src="assets/plots/testplotly.html" height="525" width="800"></iframe>
