@@ -178,20 +178,93 @@
           </div>
 
 
-
-
-
           <p>To conduct our analysis we use the <a href="https://www.cs.cmu.edu/~ark/personas/">CMU Movie Summary Corpus</a>
             dataset. It is separated in three main categories: </p>
+
           <dl>
             <dt>Movies metadata</dt>
             <dd>General infos for more than 80'000 movies, like the runtime, country of origin or genres.</dd>
+          </dl> 
+
+          <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Movie Name</th>
+                    <th>Year</th>
+                    <th>Runtime</th>
+                    <th>Language (VO)</th>
+                    <th>Prodution country</th>
+                    <th>Genre</th>
+                    <th>Box office revenue</th>
+                    <th>Tomatometer</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Love Actually</td>
+                    <td>2003</td>
+                    <td>136 min</td>
+                    <td>English, French, Portuguese</td>
+                    <td>USA, France, United Kingdom</td>
+                    <td>Romantic, Drama, Comedy</td>
+                    <td>246 mio $</td>
+                    <td>64%</td>
+                </tr>
+                <!-- and so on... -->
+            </tbody>
+          </table>
+
+          <dl>
             <dt>Characters metadata</dt>
             <dd>Different attributes for more than 450'000 characters, like the movie they appear in, 
               the actor portraying them and, for said actor, info like their height, gender or age at movie's release. </dd>
+          </dl>
+
+          <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Points</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Dom</td>
+                    <td>6000</td>
+                </tr>
+                <tr class="active-row">
+                    <td>Melissa</td>
+                    <td>5150</td>
+                </tr>
+                <!-- and so on... -->
+            </tbody>
+          </table>
+
+          <dl>
             <dt>Plot summaries</dt>
             <dd>Synopses extracted from Wikipedia for more than 40'000 movies.</dd>
           </dl>
+          
+          <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Points</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Dom</td>
+                    <td>6000</td>
+                </tr>
+                <tr class="active-row">
+                    <td>Melissa</td>
+                    <td>5150</td>
+                </tr>
+                <!-- and so on... -->
+            </tbody>
+          </table>
+
           <p>The metric we are interested in for a specific movie is its commercial success and critical one. To quantify the first one
             we use the box office revenues. However our dataset doesn't provide any info about the films' critical reception.<br>
             To obtain this metric we extracted the <a href="https://www.rottentomatoes.com/">Rotten Tomatoes</a>  score from the movies' wikidata pages.
