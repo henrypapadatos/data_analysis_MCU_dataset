@@ -383,6 +383,8 @@ section {
   font-size: 32px;
   font-weight: bold;
   /*text-transform: uppercase;*/
+  margin-left: 120px;
+  margin-right: 120px;
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative; /*was relative */
@@ -527,7 +529,17 @@ section {
   background-color: #f3f3f3;
 }
 
-
+.section-title h4 {
+  font-size: 28px;
+  font-weight: bold;
+  /*text-transform: uppercase;*/
+  margin-left: 120px;
+  margin-right: 120px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  position: left; /*was relative */
+  text-align: left;
+}
 
 /*--------------------------------------------------------------
 # Maintheme
