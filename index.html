@@ -522,6 +522,40 @@
               <li>The visibility of minorities in leading roles</li>
             </ul>   
             </dd>  
+            <details>
+              <summary>Mathematical details</summary>
+              <p>
+                ethnicity score : s &#8712; [0,1]   <br> 
+                number of ethnicity in a movie i : e<sub>i</sub>  <br> 
+                number of actor in a movie i : a<sub>i</sub>  <br> 
+                ethnicity particular score : p &#8712; [0,1]<br> 
+                <br> 
+                e<sub>i</sub> / (min(e<sub>tot</sub>, a<sub>i</sub>)) : This term account for number of ethnicity represented  (linear in number) in a movie &#8712; [0,1]  <br> 
+                <br> 
+                &#8721;p<sub>j</sub> &#8712; [0,1] : This termn account for ethnicity relative importance. The more an ethnicity is represented, the less representative value it has.  <br> 
+                <br> 
+                &#8721; (min(p<sub>j</sub> - |&#8721; r<sub>jki</sub> - p<sub>j</sub>|,0)) : This term account for minority visibility in main roles.<br> 
+                <br> 
+                s<sub>i</sub> = [ (e<sub>i</sub>)/(min(e<sub>tot</sub>, a<sub>i</sub>)) + &#8721; p<sub>j</sub>+ &#8721; (max(p<sub>j</sub> - |&#8721; r<sub>jki</sub> - p<sub>j</sub>|,0)) ] / 3   <br> 
+                <br> 
+                ethnicity particluar score :<br> 
+                p<sub>j</sub> &#8712; [0,1] , p<sub>j</sub> is the largest for ethnicity that are the least represented.  <br> 
+                a<sub>j</sub>  : number of roles/characters of a specific ethnicity (in the whole dataset)  <br> 
+                r<sub>jk</sub> : Importance of the role k  <br> 
+                <br> 
+                p<sub>j</sub> = [1/ln(a<sub>j</sub>)] / [&#8721; 1/ln(a<sub>l</sub>)] &#8801; p<sub>j</sub> = 1 / [ ln(a<sub>j</sub>) &#8729; &#8721; (1 / ln(a<sub>l</sub>) ) ]<br> 
+                <br> 
+                Thus we have : p<sub>j</sub> &#8712; [0,1] and &#8721; p<sub>j</sub> = 1<br> 
+                <br> 
+                Importance of actor role : <br> 
+                r<sub>ki</sub> : Importance of the role k in the movie i  <br> 
+                &#8721;r<sub>jki</sub> : Cumulated importance of the roles played by acotors of ethnicity j in the movie i <br> 
+                &#8721; r<sub>jki</sub> - p<sub>j</sub> : Maximum ponderation for specific ethnicity at 0  /  <br> 
+                |&#8721; r<sub>jki</sub> - p<sub>j</sub>| : Maximum ponderation for specific ethnicity at 0  \ /    <br> 
+                p<sub>j</sub> - |&#8721; r<sub>jki</sub> - p<sub>j</sub>| : Maximum ponderation for specific ethnicity at p<sub>j</sub>  / \   <br> 
+                max(p<sub>j</sub> - |&#8721; r<sub>jki</sub> - p<sub>j</sub>|,0) : Maximum ponderation for specific ethnicity at p<sub>j</sub>  / \ <br> 
+              </p>
+            </details>
           </dl>
 
 
@@ -544,8 +578,6 @@
                 <!-- and so on... -->
             </tbody>
           </table>
-
-          <p>For more details about the exact formulas used for these metrics, please refer to our accompanying Jupyter Notebook.</p>
         
         </div>
       </div>
