@@ -623,7 +623,7 @@
         <div class="section-title">
           <h2>How does representativity impact a movie’s critical and commercial success?</h2>
           <p>
-            In order to do the following analysis, we will use 2 additio features : the Rotten Tomatoes scores and the box office revenue. 
+            In order to do the following analysis, we will use 2 additional features : the Rotten Tomatoes scores and the box office revenue. 
             <br>The Rotten Tomatoes scores represent the success of the movies among critics. Whereas, the box office revenue represents the commercial success.
             <br><br>
             We will conduct an observational study to understand if the representativity in movies influences their success. 
@@ -641,7 +641,7 @@
           <p>
             During exact matching, a movie with low diversity and a movie with high diversity are matched if 
             they have exactly the same genre, country of production and year of production. 
-            <br>
+            <br><br>
             You can hover over the plot to see if you find your favorite movie!
         </p>
 
@@ -657,9 +657,15 @@
                 </div>
               </div>
             </div>
+            
 
+            <h4>Propensity score matching for a yearly observational study </h4>
             <p>
-              <br>
+              We now want to analyze if the influence of representativity in the success of movies evolves with time. <br>
+              In order to do so, we need to consider movies year by year. Therefore, we manipulate less data at once. 
+              As we can not afford to loose much data points, we will use propensity score matching. 
+              It is a more complex but less strict method then exact matching. 
+              <br><br>
               The graph below shows the evolution of the difference in Rotten Tomatoes score between films with high diversity versus films with low
               diversity. The scale is directly the number of additional percent obtained by movies with higher diversity.
               One can observe that there is no clear trend of a potential effect of ethnic or gender diversity on the film reviews given by the Rotten Tomatoes score.
@@ -667,6 +673,9 @@
               around zero.<br> We can see that the effect on ethnic diversity this time is slightly below zero, which contrasts with our previous
               results. We explain this slight difference by the method of matching (propensity and no longer exact) which has changed. In any
               case, the effect is not statistically significant enough for us to conclude that the effect is indeed present.<br>
+              <br>
+              Note that we have only considered movies realised between 1990 and 2010 because we don't have enough data before and after.<br>
+
             </p>
             <div class="col-">  
               <iframe id="serviceFrameSend" scrolling="no" style="border:none;" seamless="seamless" src="assets/plots/temporal_obsstudy_rotten.html" height="525" width="80%"></iframe>
