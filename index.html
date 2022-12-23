@@ -447,6 +447,42 @@
                 <li>The difference in the masculinity/femininity scores of the summaries</li>
               </ul>  
             </dd>
+            <details>
+              <summary>Mathematical details</summary>
+              <p>
+                g &#8712; [0,1] : the gender score asociated to a movie i <br>
+                <br>
+                Number of male actor in movie i : m<sub>i</sub>  <br>
+                Number of female actress in movie i : f<sub>i</sub>  <br>
+                Ratio of female vs total number of actor in movie i : r<sub>i</sub> &#8712; [0,1]   <br> 
+                <br> 
+                Cummulated importance of male actor in movie i : mp<sub>i</sub>  <br> 
+                Cummulated importance of female actress in movie i : fp<sub>i</sub>  <br>   
+                Ratio of cumulated importance of female actress vs total roles importance rp<sub>i</sub>  <br> 
+                <br> 
+                Masculinity of speech in summary of movie i : ms<sub>i</sub>  <br> 
+                Feminility of speech in summary of movie i : fs<sub>i</sub>   <br> 
+                <br> 
+                r<sub>i</sub> &#8712; [0,1] : maximum gender diversity is at 0.5  <br> 
+                (1 - 2 &#8729; r<sub>i</sub>) &#8712;[-1,1] : maximum gender diversity is at 0   <br> 
+                |(1 - 2 &#8729; r<sub>i</sub>)| &#8712; [0,1] : maximum gender diversity is at 0  <br> 
+                1 - |(1 - 2 &#8729; r<sub>i</sub>)| &#8712; [0,1] : maximum gender diversity is at 1  <br> 
+                This part pounder gender score by proportion of gender represented  <br> 
+                <br> 
+                rp<sub>i</sub> &#8712; [0,1] : maximum gender diversity is at 0.5  /  <br> 
+                (1 - 2 &#8729; rp<sub>i</sub>) &#8712; [-1,1] : maximum gender diversity is at 0  /   <br> 
+                |(1 - 2 &#8729; rp<sub>i</sub>)| &#8712; [0,1] : maximum gender diversity is at 0  \ /    <br> 
+                1 - |(1 - 2 &#8729; rp<sub>i</sub>)| &#8712; [0,1] : maximum gender diversity is at 1 /\   <br> 
+                This part pounder gender score by relative importance of the role they play <br> 
+                <br> 
+                fs<sub>i</sub> - ms<sub>i</sub> : maximum diversity is at 0 /  <br> 
+                |fs<sub>i</sub> - ms<sub>i</sub>| : maximum diversity is at 0 \/   <br> 
+                1 - |fs<sub>i</sub> - ms<sub>i</sub>| : maximum diversity is at 1 /\   <br> 
+                This part pounder gender score by the empath score of the summary<br> 
+                <br> 
+                g = (1 - |(1 - 2 &#8729; r<sub>i</sub>)|)  &#8729; (1 - |(1 - 2 &#8729; rp<sub>i</sub>)|)  &#8729; (1 - |fs<sub>i</sub> - ms<sub>i</sub>|)  <br> 
+              </p>
+            </details>
           </dl>
             <table class="styled-table">
               <thead>
