@@ -383,10 +383,8 @@ section {
   font-size: 32px;
   font-weight: bold;
   /*text-transform: uppercase;*/
-  /* margin-left: 120px;
-  margin-right: 120px; */
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 120px;
+  margin-right: 120px;
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative; /*was relative */
@@ -417,10 +415,8 @@ section {
 
 .section-title p {
   margin-bottom: 0;
-  /* margin-left: 120px;
-  margin-right: 120px; */
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 120px;
+  margin-right: 120px;
   text-align: justify; /* Lign was added to put to left*/
 }
 
@@ -439,7 +435,7 @@ section {
 
 .section-title dl {
   position: relative;
-  margin-left: 17%; /*140px;*/
+  margin-left: 140px;
   text-align: left;
   margin-top: 3px;
   margin-bottom: -2px;
@@ -453,7 +449,7 @@ section {
 
 .section-title dl dd {
   padding-bottom: 0px;
-  margin-right: 15%; /*120px;*/
+  margin-right: 120px;
   text-align: justify; /* Lign was added to put to left*/
 }
 
@@ -537,10 +533,8 @@ section {
   font-size: 28px;
   font-weight: bold;
   /*text-transform: uppercase;*/
-  /* margin-left: 120px;
-  margin-right: 120px; */
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 120px;
+  margin-right: 120px;
   margin-bottom: 10px;
   padding-bottom: 10px;
   position: left; /*was relative */
