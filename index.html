@@ -185,7 +185,7 @@
             To conduct our analysis, we used the <a href="https://www.cs.cmu.edu/~ark/personas/">CMU Movie Summary Corpus</a>.
             This is a huge dataset with information on more than 80'000 films, 450'000 characters and more than 40'000 summaries.
             We will guide you through the type of information available and all the manipulations we have done using the Christmas
-            classic <i>Love Atually</i> as an example. The dataset is separated in three categories:
+            classic <i>Love Actually</i> as an example. The dataset is separated in three categories:
           </p>
 
           <dl>
@@ -238,7 +238,7 @@
               A table with different attributes about the actors and their film characters. However, the ethnicities given for the
               actors were sometimes extremely specific and other times far too general. They were not usable for a meaningful 
               analysis. We therefore grouped them into nine broad geographical categories, and a tenth to take into account
-              unclassifiable minorities
+              unclassifiable minorities.
             </dd>
           </dl>
 
@@ -386,7 +386,7 @@
               analysed the summary of the film and awarded points each time a character was mentioned, and proportionally 
               to the order of appearance. In addition, we used the natural language processing tool <a href="https://spacy.io/universe/project/neuralcoref">neuralcoref</a>
                based on <a href="https://spacy.io">spaCy</a> to analyse the summaries, find the character's
-              co-references and replace them with their names, as highlighted in the exemple below.
+              co-references and replace them with their names, as highlighted in the example below.
 
               <div style="display: flex; margin-left: 20px; margin-right: 20px; margin-bottom: 2em; margin-top: 2em;">
                 <div style="width: 50%; text-align: justify; margin-right: 2em;">
@@ -524,7 +524,7 @@
           <h2>How is representativity distributed across cinematography genre, countries of production and time?</h2>
           <h4>Release date's influence</h4>
           <p>
-            We are first intersted at how the scores evolved through time. The average values of the gender diversity metric and ethnicity
+            We are first interested at how the scores evolved through time. The average values of the gender diversity metric and ethnicity
             diversity metric are displayed in the graph below.<br> Two trends can be seen to emerge. On the one hand, ethnic diversity
             seems to be decreasing slightly or maybe even stabilising over the years, while on the other hand, we can clearly see
             the diversity of the genre increasing, having almost tripled in less than a century.<br> An attempt can be made to explain
@@ -534,8 +534,8 @@
             American and African-American. In addition, Indian cinema has a large number of actors, thus it does not represent a
             minority and therefore makes especially few points.<br>
             On the contrary, we did not find an obvious explanation for the increase in gender diversity, so this would rather
-            suggest a societal change, which is a good news for the representation of diversity. Later we shall try to measure
-            if this effect is visible in commerical or critcal succes of a movie.
+            suggest a societal change, which is good news for the representation of diversity. Later we shall try to measure
+            if this effect is visible in commercial or critical success of a movie.
           </p>
 
           <div class="col-">  
@@ -549,7 +549,7 @@
             distribution of our data. <br> This graph represents the evolution of world cinema, with all the biases associated with the method and
             completeness with which the <a href="https://www.cs.cmu.edu/~ark/personas/">CMU Movie Summary Corpus</a> data was collected. The
             emergence of Bollywood cinema, and the associated growth in the number of South Asian actors, can easlily be observed, as well as
-            the decline of black and white films. Intererstingly enough, one can see the golden age of the Italian cinema in the mid sixties where at
+            the decline of black and white films. Interestingly enough, one can see the golden age of Italian cinema in the mid sixties where at
             its peak it represented 25% of the world film production. 
           </p>
 
@@ -561,7 +561,7 @@
           <div class="section-title">
             <h4>Country of origin's influence</h4>
             <p> 
-              We were then interseted to see if some country typically produced more diverse movies. The plot below shows
+              We were then interested to see if some country typically produced more diverse movies. The plot below shows
               for each country (when available) the average scores of movies produced by said nation. The dropdown menu allows
               to select between gender diversity score and ethnicity diversity score.<br>
               Regarding ethnic diversity, there are no big surprises or particularly interesting discrepancies. Countries
@@ -570,8 +570,8 @@
               low score.<br> 
               Similarly, there is no particular discrepancy regarding the representativeness of the genre with the exception of
               the Iran-Pakistan-India area. An area that is not usually known for its gender equality, it is therefore particularly
-              surprising that it scores so well in terms of gender representation, almost 25% higher than the US. Note, however,
-              that we only measure the importance of gender on screen, in terms of visibility, and do not do further analysis 
+              surprising that it scores so well in terms of gender representation, almost 25% higher than the US. <br>
+              Note however that we only measure the importance of gender on screen in terms of visibility, and do not do further analysis 
               on potential stereotypes that may exist.<br>
             </p>
   
@@ -586,7 +586,7 @@
             <p> 
               Finally, we looked at the distribution of the two scores among the main film genres. In order to have
               a meaningful comparison, we considered only the 12 most common types of films in the dataset.<br>
-              Firstly, we notice that the category with the highest genre diversity scores is the romance films. This
+              Firstly, we notice that the category with the highest genre diversity scores is romance films. This
               is easily explained as most films in this genre have a male and a female lead. Then, unsurprisingly, one
               of the worst scores is for the category of black and white films. This is a category of film that has
               disappeared over time, while the average representation of the genre has increased.  On the other hand,
@@ -660,9 +660,9 @@
 
             <p>
               <br>
-              The graph below shows the evolution of the difference in rottentomatoes score between films with high diversity versus films with low
-              diversity. The scale is directly the number of additional percent obtained by moives with higher diversity.
-              one can observed that there is no clear trend of a potential effect of ethnic or gender diversity on the film reviews given by the Rotten Tomatoes score.
+              The graph below shows the evolution of the difference in Rotten Tomatoes score between films with high diversity versus films with low
+              diversity. The scale is directly the number of additional percent obtained by movies with higher diversity.
+              One can observe that there is no clear trend of a potential effect of ethnic or gender diversity on the film reviews given by the Rotten Tomatoes score.
               We see fluctuations from year to year, linked to the limited number of films available, while the average seems to remain stable
               around zero.<br> We can see that the effect on ethnic diversity this time is slightly below zero, which contrasts with our previous
               results. We explain this slight difference by the method of matching (propensity and no longer exact) which has changed. In any
